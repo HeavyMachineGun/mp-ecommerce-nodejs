@@ -86,11 +86,12 @@
                             </div>
                             <!--button type="submit" class="mercadopago-button" formmethod="post">Pagar</button!-->
                             <form action="/procesar-pago" method="POST">
-                              
+
                               <script
                                src="https://www.mercadopago.com.mx/integrations/v1/web-payment-checkout.js"
                                data-button-label="Pagar la compra"
-                               data-preference-id="{{id}}">
+                               data-ejemplo="{{ init_point }}"
+                               data-preference-id="{{ id }}">
                               </script>
                             </form>
                         </div>
