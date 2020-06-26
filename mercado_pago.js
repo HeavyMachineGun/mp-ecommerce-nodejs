@@ -16,7 +16,7 @@ module.exports = {
 	      id:'1234',
 	      currency_id: "MXN",
 	      description:'Dispositivo móvil de Tienda e-commerce',
-	      picture_url: "www.mercadopago.com/org-img/MP3/home/logomp3.gif",//`https://heavy-mp-commerce-nodejs.herokuapp.com/${img.replace('./','')}`,
+	      picture_url: `https://heavy-mp-commerce-nodejs.herokuapp.com/${img.replace('./','')}`,
 	      title: title,
 	      unit_price: Number(price),
 	      quantity: parseInt(unit,10),
@@ -36,13 +36,7 @@ module.exports = {
         ],
         "installments": 6
     },
-     back_urls: {
-        "success": "https://heavy-mp-commerce-nodejs.herokuapp.com/success",
-        "failure": "https://heavy-mp-commerce-nodejs.herokuapp.com/failure",
-        "pending": "https://heavy-mp-commerce-nodejs.herokuapp.com/pending"
-    },
-    auto_return: "all",
-	  payer: {
+	payer: {
 	    "name": "Lalo",
 	    "surname": "Landa",
 	    "email": "test_user_58295862@testuser.com",
@@ -60,7 +54,13 @@ module.exports = {
 	        "zip_code": "03940"
 	    }
     },
-    "notification_url":"https://heavy-mp-commerce-nodejs.herokuapp.com/ipn"
+    "notification_url":"https://heavy-mp-commerce-nodejs.herokuapp.com/ipn",
+    "back_urls": {
+        "success": "https://heavy-mp-commerce-nodejs.herokuapp.com/success",
+        "failure": "https://heavy-mp-commerce-nodejs.herokuapp.com/failure",
+        "pending": "https://heavy-mp-commerce-nodejs.herokuapp.com/pending"
+    },
+    "auto_return": "aproved",
 	};
 
 	return mercadopago.preferences.create(preference)
