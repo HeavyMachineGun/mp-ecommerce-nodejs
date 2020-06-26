@@ -60,7 +60,7 @@ module.exports = {
         "failure": "https://heavy-mp-commerce-nodejs.herokuapp.com/failure",
         "pending": "https://heavy-mp-commerce-nodejs.herokuapp.com/pending"
     },
-    "auto_return": "aproved",
+    "auto_return": "approved",
 	};
 
 	return mercadopago.preferences.create(preference)
