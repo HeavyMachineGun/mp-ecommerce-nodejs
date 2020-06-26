@@ -53,9 +53,9 @@ app.post('/procesar-pago', function (req, res) {
     
 
 });
-app.post('/notification', function (req, res) {
-    
+app.post('/ipn', function (req, res) {
     console.log(JSON.stringify(req.body));
+    
     res.status(200);
 });
 
