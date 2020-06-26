@@ -16,7 +16,7 @@ module.exports = {
 	      id:'1234',
 	      currency_id: "MXN",
 	      description:'Dispositivo móvil de Tienda e-commerce',
-	      picture_url: `https://heavy-mp-commerce-nodejs.herokuapp.com/${img.replace('./','')}`,
+	      picture_url: "www.mercadopago.com/org-img/MP3/home/logomp3.gif",//`https://heavy-mp-commerce-nodejs.herokuapp.com/${img.replace('./','')}`,
 	      title: title,
 	      unit_price: Number(price),
 	      quantity: parseInt(unit,10),
@@ -36,24 +36,31 @@ module.exports = {
         ],
         "installments": 6
     },
-	  payer: {
-        "name": "Lalo",
-        "surname": "Landa",
-        "email": "test_user_58295862@testuser.com",
-        "phone": {
-            "area_code": "52",
-            "number": Number("5549737300")
-        },
-        "identification": {
-            "type": "DNI",
-            "number": "535650015"
-        },
-        "address": {
-            "street_name": "Insurgentes Sur",
-            "street_number": 1602,
-            "zip_code": "03940"
-        }
+     back_urls: {
+        "success": "https://heavy-mp-commerce-nodejs.herokuapp.com/success",
+        "failure": "https://heavy-mp-commerce-nodejs.herokuapp.com/failure",
+        "pending": "https://heavy-mp-commerce-nodejs.herokuapp.com/pending"
     },
+    auto_return: "all",
+	  payer: {
+	    "name": "Lalo",
+	    "surname": "Landa",
+	    "email": "test_user_58295862@testuser.com",
+	    "phone": {
+	        "area_code": "52",
+	        "number": Number("5549737300")
+	    },
+	    "identification": {
+	        "type": "DNI",
+	        "number": "535650015"
+	    },
+	    "address": {
+	        "street_name": "Insurgentes Sur",
+	        "street_number": 1602,
+	        "zip_code": "03940"
+	    }
+    },
+    "notification_url":"https://heavy-mp-commerce-nodejs.herokuapp.com/ipn"
 	};
 
 	return mercadopago.preferences.create(preference)
@@ -75,7 +82,7 @@ module.exports = {
 			  payment_method_id: payment_method_id,
 			  issuer_id: issuer_id,
 			  payer: {
-			    email: 'tate@yahoo.com'
+			    email: 'test_user_58295862@testuser.com'
 			  }
 			};
 
