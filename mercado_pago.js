@@ -14,7 +14,6 @@ module.exports = {
 	  items: [
 	    {
 	      id:'1234',
-	      currency_id: "MXN",
 	      description:'Dispositivo móvil de Tienda e-commerce',
 	      picture_url: `https://heavy-mp-commerce-nodejs.herokuapp.com/${img.replace('./','')}`,
 	      title: title,
