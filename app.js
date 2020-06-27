@@ -43,7 +43,7 @@ app.get('/failure', function (req, res) {
 app.get('/success', function (req, res) {
     
     console.log(JSON.stringify(req.body));
-    res.render('success');
+    res.render('success',req.body);
 
 });
 app.post('/procesar-pago', function (req, res) {
