@@ -49,6 +49,8 @@ app.get('/success', function (req, res) {
 app.post('/procesar-pago', function (req, res) {
     console.log("notificacion recibida:");
     console.log(JSON.stringify(req.body));
+    console.log((req.body));
+    
     res.status(200).send("realizado");
     
 
